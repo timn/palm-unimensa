@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: index.php,v 1.5 2003/11/04 12:36:05 tim Exp $ */
+/* $Id: index.php,v 1.6 2003/12/10 16:41:12 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa";
 $meta_desc="A software to keep mensa plans on your Palm.";
@@ -14,7 +14,7 @@ $languages=array( "de" => "German/Deutsch",
                   "en" => "English"
                 );
 
-$genpdbver = "0.1";
+$genpdbver = "0.3";
 
 heading_lastmod();
 heading("Uni Mensa",

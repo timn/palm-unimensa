@@ -8,7 +8,7 @@
 
 include ../UniMensa.mk
 
-GENPDBVERSION=0.2
+GENPDBVERSION=0.3
 
 CC=gcc
 CFLAGS=-static
@@ -29,6 +29,9 @@ dist: clean all parsemensa.pl getmensa.pl run.sh README $(PROGS)
 	cp senddb.pl genUMENpdb-$(GENPDBVERSION)
 	cp run.sh genUMENpdb-$(GENPDBVERSION)
 	cp README genUMENpdb-$(GENPDBVERSION)
+	cp *.c genUMENpdb-$(GENPDBVERSION)
+	cp *.h genUMENpdb-$(GENPDBVERSION)
+	cp Makefile genUMENpdb-$(GENPDBVERSION)
 	tar cvfz genUMENpdb-$(GENPDBVERSION).tar.gz genUMENpdb-$(GENPDBVERSION)/
 	rm -rf genUMENpdb-$(GENPDBVERSION)
 
