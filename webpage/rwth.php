@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: rwth.php,v 1.4 2003/10/30 13:29:20 tim Exp $ */
+/* $Id: rwth.php,v 1.5 2003/10/30 14:09:25 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Database for RWTH Aachen";
 $meta_desc="A software to keep mensa plans on your Palm.";
@@ -43,7 +43,8 @@ Das Programm wird offiziell <a href="http://www.studentenwerk-aachen.de/essen/sp
 
 <h5>Was wird benötigt?</h5>
 <li>PalmOS Handheld mit PalmOS Version 3.5 oder besser (z.B. Palm III(x|xe|c...), m5xx, m1xx)</li>
-<li>UniMensa (gibt's <a href="index.php">hier</a>)</li>
+<li>UniMensa (gibt's <a href="<?=$basename?>-<?=$version?>_dist/<?=$basename?>-<?=$version?>-de.prc">hier</a>, weitere Sprachen <a href="index.php">hier</a>.
+    Übersetzer gesucht; wer also seine Muttersprache bevorzugt...)</li>
 
 <h5>Kurzanleitung</h5>
 Zuerst UniMensa <a href="<?=$basename?>-<?=$version?>_dist/<?=$basename?>-<?=$version?>-de.prc">hier</a> herunterladen.
