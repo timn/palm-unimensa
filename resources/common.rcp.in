@@ -1,4 +1,4 @@
-/* $Id: common.rcp.in,v 1.1 2003/02/10 22:45:50 tim Exp $
+/* $Id: common.rcp.in,v 1.2 2003/10/08 23:09:56 tim Exp $
  *
  * Common resources like bitmaps, menus, alerts
  * Created: 2002-08-13
@@ -10,6 +10,8 @@ bitmapfamily id BITMAP_logo "images/icon_sw.bmp" "" "" "images/icon_256c.bmp" co
 
 bitmapcolor id BITMAP_ok "images/ok.bmp" compress
 bitmapcolor id BITMAP_ok_clicked "images/ok_clicked.bmp" compress
+bitmapcolor id BITMAP_cancel "images/cancel.bmp" compress
+bitmapcolor id BITMAP_cancel_clicked "images/cancel_clicked.bmp" compress
 
 
 ##TRANSLATION##
@@ -22,6 +24,12 @@ begin
     menuitem "men_beam" id MENUITEM_beam "B"
     menuitem separator
     menuitem "men_ab" id MENUITEM_about "A"
+  end
+  pulldown "men_opt"
+  begin
+    menuitem "men_prefs" id MENUITEM_prefs "P"
+    menuitem separator
+    menuitem "men_dbinfo" id MENUITEM_dbinfo "I"
   end
 end
 
