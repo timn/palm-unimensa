@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: databases.php,v 1.5 2004/01/18 21:06:58 tim Exp $ */
+/* $Id: databases.php,v 1.6 2004/01/18 21:13:34 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Databases";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -56,21 +56,15 @@ there are some other coders around the globe who would like to adapt my software
 <? } ?>
 </table>
 
-<h5>Developer kit:</h5><br/>
-If you want to generate UniMensa databases for your university the following kit is for you!
-It contains the scripts that I use to generate the database for RWTH Aachen. That are:<br/>
-<ul>
-<li>getmensa.pl: Gets webpage with next weeks plan</li>
-<li>parsemensa.pl: Uses HTML::TreeBuilder to extract the real menu information from the file leeched with getmensa.pl</li>
-<li>genUMENpdb: a statically linked version of the PDB generator that creates the real database. Right now I do not publish
-the source code. That may come with a later release when everything has stabilized. This binary was compiled on a pretty
-clean RedHat 8 machine with GCC 3. It is plain C so there shouldn't be many problems. I have plans to make the generator
-available as a web or SOAP app. If you really have plans to generate databases and you <i>can code</i> and are willing to
-do some work just <a href="mailto:tim@niemueller.de?Subject=UniMensa PDB Generator">mail</a> me and we will find a
-solution.</li>
-</ul>
-
-Here is the file: <a href="genUMENpdb-<?=$genpdbver?>.tar.gz">genUMENpdb-<?=$genpdbver?>.tar.gz</a><br/><br/>
+<h5>How to deploy UniMensa to your University</h5><br/>
+<a href="index.php">UniMensa</a> is part of the
+<a href="/uni/mensa/">Mensa Framework</a>. It describes a simple format
+to make the menu plans of your university digitally public.
+Right now there are several frontends available that users may use
+to view the digital menu. For more information about the architecture,
+the available clients (frontends for the user) and how to get your
+university online please read about the
+<a href="/uni/mensa/">Mensa Framework</a>.
 
 </div>
 
