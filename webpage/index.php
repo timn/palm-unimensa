@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: index.php,v 1.4 2003/10/30 13:19:16 tim Exp $ */
+/* $Id: index.php,v 1.5 2003/11/04 12:36:05 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa";
 $meta_desc="A software to keep mensa plans on your Palm.";
@@ -16,20 +16,11 @@ $languages=array( "de" => "German/Deutsch",
 
 $genpdbver = "0.1";
 
-box_begin("Uni Mensa", "Last modified ".date ("F d Y H:i:s.", getlastmod()));
+heading_lastmod();
+heading("Uni Mensa",
+        "Software to take the current mensa food plan with you",
+        "unimensa_big.png");
 ?>
-<br/>
-
-<table border="0" cellpadding="4">
- <tr>
-  <td rowspan="2" valign="top"><img src="unimensa_big.png" border="0" alt="Uni Mensa"></td>
-  <td><h3>Uni Mensa</h3>
- </tr>
- <tr>
-  <td><h4>Software to take the current mensa food plan with you.</h4></td>
- </tr>
-</table>
-
 <div class="maintext">
 <h5>Introduction</h5>
 This PalmOS applications allows you to take the current mensa food plan with you.
@@ -45,9 +36,9 @@ Some features:
 <br/>
 Just to be sure that you heard: You will need a PalmOS device to run this
 application. You can also use the Palm OS Emulator
-<a href="http://www.palmos.com/dev/tools/emulator/" target="_new">POSE</a>.
+<a href="http://www.palmos.com/dev/tools/emulator/" rel="external">POSE</a>.
 Linux binaries can be found
-<a href="http://sourceforge.net/project/showfiles.php?group_id=2189&release_id=84895" target="_new">here</a>.
+<a href="http://sourceforge.net/project/showfiles.php?group_id=2189" rel="external">here</a>.
 <br/>
 <i>Do not ask for ROM files</i>. I cannot and I do not want to share
 my ROMs with you. Go to the mentioned POSE page, there is a description
@@ -91,9 +82,9 @@ Some screenshots will give you an impression of the software.
 <br/><br/>
 <table border="0" width="100%" cellpadding="0">
  <tr>
-  <td align="center" width="33%"><img src="screens/main.png" border="1" alt="Main screen"></td>
-  <td align="center" width="34%"><img src="screens/categories.png" border="1" alt="Edit course"></td>
-  <td align="center" width="33%"><img src="screens/about.png" border="1" alt="Edit Time"></td>
+  <td align="center" style="width:33%;"><img src="screens/main.png" style="border:1px solid #c0c0c0;" alt="Main screen" /></td>
+  <td align="center" style="width:34%;"><img src="screens/categories.png" style="border:1px solid #c0c0c0;" alt="Edit course" /></td>
+  <td align="center" style="width:33%;"><img src="screens/about.png" style="border:1px solid #c0c0c0;" alt="Edit Time" /></td>
  </tr>
  <tr>
   <th>Main screen</th>
@@ -136,20 +127,14 @@ You may download the Palm install file provided as a .zip and as a .tar.gz file.
  </tr>
 <?   } ?>
 <? } ?>
- <tr>
-  <td>Download on PalmGear (English)</td>
-  <td>&nbsp; &nbsp;</td>
-  <td></td>
-  <td>&nbsp;</td>
-  <td><a href="http://www.palmgear.com/software/redirector.cfm/UniMensa<?=$version?>en.zip?prodID=45714&type=zip">.zip</a> (<?=filesize("{$basename}-{$version}_dist/{$basename}-{$version}-en.zip")?> Bytes)</td>
- </tr>
 </table>
 <br/>
 You can get the databases <a href="databases.php">here</a>.
 
 <h5>Developer kit:</h5>
 If you want to generate UniMensa databases for your university the following kit is for you!
-It contains the scripts that I use to generate the database for RWTH Aachen. That are:<br/>
+It contains the scripts that I use to generate the database for RWTH Aachen. That are:
+<ul>
 <li>getmensa.pl: Gets webpage with next weeks plan</li>
 <li>parsemensa.pl: Uses HTML::TreeBuilder to extract the real menu information from the file leeched with getmensa.pl</li>
 <li>genUMENpdb: a statically linked version of the PDB generator that creates the real database. Right now I do not publish
@@ -158,17 +143,11 @@ clean RedHat 8 machine with GCC 3. It is plain C so there shouldn't be many prob
 available as a web or SOAP app. If you really have plans to generate databases and you <i>can code</i> and are willing to
 do some work just <a href="mailto:tim@niemueller.de?Subject=UniMensa PDB Generator">mail</a> me and we will find a
 solution.</li>
+</ul>
 
 Here is the file: <a href="genUMENpdb-<?=$genpdbver?>.tar.gz">genUMENpdb-<?=$genpdbver?>.tar.gz</a><br/><br/>
 
 </div>
 
-<?php
-box_end();
-
-?>
-
 <? include("$DOCUMENT_ROOT/right.inc.php"); ?>
 <? include("$DOCUMENT_ROOT/footer.inc.php"); ?>
-</body>
-</html>
