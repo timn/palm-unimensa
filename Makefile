@@ -90,6 +90,8 @@ package: clean all
 	rm -rf $(PROGNAME)-$(VERSION)-$(SHORTLANGUAGE)
 
 upload: dist
+	$(MAKE) LANGUAGE=german clean all
+	cp $(PROGNAME).prc $(PROGNAME)-$(VERSION)_dist/$(PROGNAME)-$(VERSION)-de.prc
 	scp -r $(PROGNAME)-$(VERSION)_dist $(SSH_USER)@$(SSH_HOST):$(SSH_PATH)
 	scp -r webpage/* $(SSH_USER)@$(SSH_HOST):$(SSH_PATH)
 
