@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: index.php,v 1.6 2003/12/10 16:41:12 tim Exp $ */
+/* $Id: index.php,v 1.7 2004/01/05 21:15:38 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa";
 $meta_desc="A software to keep mensa plans on your Palm.";
@@ -8,7 +8,7 @@ $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Me
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
 
-$version="0.3";
+$version="0.4";
 $basename="UniMensa";
 $languages=array( "de" => "German/Deutsch",
                   "en" => "English"
