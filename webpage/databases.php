@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: databases.php,v 1.2 2003/11/14 21:10:59 tim Exp $ */
+/* $Id: databases.php,v 1.3 2003/11/14 21:20:51 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Databases";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -9,7 +9,7 @@ include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
 
 $unis = array("rwth" => "RWTH Aachen (generated every friday for next week)",
-              "unido" => "Universität Dortmund"
+              "unido" => "Universit&auml;t Dortmund"
               );
 
 $pdbs=array( "rwth" => "UniMensaDB-RWTH.pdb",
@@ -42,12 +42,13 @@ there are some other coders around the globe who would like to adapt my software
   <td><b>More</b></td>
  </tr>
 <? foreach ($unis as $uni => $desc) { ?>
+<? preg_match("/\/?([^\/]*)$/", $pdbs[$uni], $matches) ?>
  <tr>
   <td><?=$desc?></td>
   <td>&nbsp; &nbsp;</td>
-  <td><a href="<?=$pdbs[$uni]?>"><?=$pdbs[$uni]?></a></td>
+  <td><a href="<?=$pdbs[$uni]?>"><?=$matches[1]?></a></td>
   <td>&nbsp; &nbsp;</td>
-  <td><a href="<?=$links[$uni]?>">More Info</a></td>
+  <td><a href="<?=$links[$uni]?>"<? if ($uni != "rwth") { echo " rel=\"external\""; }?>>More Info</a></td>
  </tr>
 <? } ?>
 </table>
