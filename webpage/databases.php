@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: databases.php,v 1.3 2003/11/14 21:20:51 tim Exp $ */
+/* $Id: databases.php,v 1.4 2003/11/14 22:10:10 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Databases";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -56,6 +56,7 @@ there are some other coders around the globe who would like to adapt my software
 <h5>Developer kit:</h5><br/>
 If you want to generate UniMensa databases for your university the following kit is for you!
 It contains the scripts that I use to generate the database for RWTH Aachen. That are:<br/>
+<ul>
 <li>getmensa.pl: Gets webpage with next weeks plan</li>
 <li>parsemensa.pl: Uses HTML::TreeBuilder to extract the real menu information from the file leeched with getmensa.pl</li>
 <li>genUMENpdb: a statically linked version of the PDB generator that creates the real database. Right now I do not publish
@@ -64,6 +65,7 @@ clean RedHat 8 machine with GCC 3. It is plain C so there shouldn't be many prob
 available as a web or SOAP app. If you really have plans to generate databases and you <i>can code</i> and are willing to
 do some work just <a href="mailto:tim@niemueller.de?Subject=UniMensa PDB Generator">mail</a> me and we will find a
 solution.</li>
+</ul>
 
 Here is the file: <a href="genUMENpdb-<?=$genpdbver?>.tar.gz">genUMENpdb-<?=$genpdbver?>.tar.gz</a><br/><br/>
 
