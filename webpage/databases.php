@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: databases.php,v 1.7 2004/01/18 21:15:12 tim Exp $ */
+/* $Id: databases.php,v 1.8 2004/01/18 21:17:23 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Databases";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -8,7 +8,7 @@ $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Me
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
 
-$unis = array("rwth"   => "RWTH Aachen (generated every friday for next week)",
+$unis = array("rwth"   => "RWTH Aachen",
               "unido"  => "Universit&auml;t Dortmund",
               "tuda"   => "TU Darmstadt",
               );
@@ -48,7 +48,7 @@ Read <a href="#deploy">below</a> how to deploy UniMensa to your university.
   <td>&nbsp; &nbsp;</td>
   <td><a href="<?=$pdbs[$uni]?>"><?=$matches[1]?></a></td>
   <td>&nbsp; &nbsp;</td>
-  <td><a href="<?=$links[$uni]?>"<? if ($uni != "rwth") { echo " rel=\"external\""; }?>>More Info</a></td>
+  <td><a href="<?=$links[$uni]?>"<? if ($uni != "rwth") { echo " rel=\"external\""; }?>>UniMensa Info for <?=$desc?></a></td>
  </tr>
 <? } ?>
 </table>
