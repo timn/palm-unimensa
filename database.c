@@ -1,4 +1,4 @@
-/* $Id: database.c,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: database.c,v 1.2 2003/10/08 23:10:46 tim Exp $
  *
  * Database related functions
  */
@@ -7,6 +7,8 @@
 
 DmOpenRef gDatabase=NULL;
 UInt16    gCategory=0;
+UInt32    gDatabaseCurDB=0;
+UInt16    gDatabaseCardNo=0;
 
 /*****************************************************************************
 * Function:  OpenDatabase
@@ -17,7 +19,28 @@ Err OpenDatabase(void) {
 	Err err = errNone;
 
   if (! gDatabase) {
-    gDatabase = DmOpenDatabaseByTypeCreator(DATABASE_TYPE, APP_CREATOR, dmModeReadWrite);
+    LocalID dbID=0;
+    UInt16 cardNo=0;
+    UInt32 dbType='appl';
+    Boolean started=true;
+    DmSearchStateType *searchState;
+    searchState = MemPtrNew(sizeof(DmSearchStateType));
+    while (dbType == 'appl') {
+
+      if (DmGetNextDatabaseByTypeCreator(started, searchState, 0, APP_CREATOR, false, &cardNo, &dbID) != errNone) {
+        break;
+      }
+      started = false;
+      DmDatabaseInfo(cardNo, dbID, NULL, NULL, NULL, NULL, NULL,
+                     NULL, NULL, NULL, NULL, &dbType, NULL);
+      if (dbType != 'appl') {
+        gDatabase = DmOpenDatabase(cardNo, dbID, dmModeReadWrite);
+        gDatabaseCurDB = dbType;
+        gDatabaseCardNo = cardNo;
+      }
+    }
+    // gDatabase = DmOpenDatabaseByTypeCreator(DATABASE_TYPE, APP_CREATOR, dmModeReadWrite);
+    MemPtrFree(searchState);
     if (!gDatabase)  return dmErrCantOpen;
   }
 
@@ -66,3 +89,20 @@ void DatabaseSetCat(UInt16 newcat) {
   gCategory=newcat;
 }
 
+/*****************************************************************************
+* Function:  DatabaseGetType
+*
+* Description: Returns the currently opened database type (aka university)
+*****************************************************************************/
+UInt32 DatabaseGetType() {
+  return gDatabaseCurDB;
+}
+
+/*****************************************************************************
+* Function:  DatabaseGetCardNo
+*
+* Description: Returns the card no of the opened DB
+*****************************************************************************/
+UInt32 DatabaseGetCardNo() {
+  return gDatabaseCardNo;
+}

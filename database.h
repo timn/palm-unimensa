@@ -1,4 +1,4 @@
-/* $Id: database.h,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: database.h,v 1.2 2003/10/08 23:10:46 tim Exp $
  *
  * Database stuff header file
  */
@@ -7,14 +7,6 @@
 #define __DATABASE_H_
 
 #include "UniMensa.h"
-
-#define DATABASE_NAME "UniMensaUMEN"
-#define DATABASE_TYPE 'Food'
-#define DATABASE_CARD 0
-
-#define TYPE_COURSE 1
-#define TYPE_TIME 2
-
 
 typedef struct {
 	UInt16	renamedCategories; 
@@ -39,7 +31,7 @@ extern void CloseDatabase(void);
 extern DmOpenRef DatabaseGetRef(void);
 extern UInt16 DatabaseGetCat(void);
 extern void DatabaseSetCat(UInt16 newcat);
-
-// extern void UnpackCourse(CourseDBRecord *course, const MemPtr mp);
+extern UInt32 DatabaseGetType();
+extern UInt32 DatabaseGetCardNo();
 
 #endif /* __DATABASE_H_ */
