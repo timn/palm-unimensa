@@ -1,0 +1,6 @@
+In this window you can define the behavior on startup of UniMensa.
+It can either show the current menu of the mensa that was shown last
+when the program was closed the last time ("Save last mensa") or
+it will always show a defined default mensa that you specify in the
+list ("Always default mensa"). If you disable both options a
+database defined default mensa will be shown on startup.

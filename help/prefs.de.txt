@@ -1,0 +1,7 @@
+In diesem Fenster können Sie das Verhalten beim Start von UniMensa
+festlegen. Es kann entweder nach dem Start des Programms das aktuelle
+Menü der Mensa anzeigen, die beim letzten Beenden des Programms
+angezeigt wurde ("Letzte Mensa speichern") oder immer mit einer fest
+vorgegebenen Mensa starten, die Sie aus der Liste auswählen
+("Immer Standard-Mensa"). Wenn Sie keine der beiden Optionen wählen
+wird der Datenbank-spezifische Standard angezeigt.
