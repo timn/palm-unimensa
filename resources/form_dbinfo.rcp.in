@@ -1,0 +1,25 @@
+/* $Id: form_dbinfo.rcp.in,v 1.1 2003/10/08 23:06:39 tim Exp $
+ *
+ * Database info form
+ *
+ * Created 2003/10/08
+ */
+
+#include "resources.h"
+
+##TRANSLATION##
+
+form id DBINFO_form at (2 59 156 99)
+modal
+begin
+  title "dbinfo_title"
+  
+  label "dbinfo_uni" autoid at (4 18) font 1
+  label "              " id DBINFO_uni at (prevleft prevbottom)
+
+  label "dbinfo_valid" autoid at (prevleft prevbottom+4) font 1
+  label "              " id DBINFO_valid at (prevleft prevbottom)
+
+
+  button "" id DBINFO_ok at (134 prevbottom+12 11 11) noframe graphical bitmapid BITMAP_ok selectedbitmapid BITMAP_ok_clicked
+end
