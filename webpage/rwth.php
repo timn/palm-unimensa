@@ -1,9 +1,9 @@
 <?php
 
-/* $Id: rwth.php,v 1.2 2003/10/08 23:11:13 tim Exp $ */
+/* $Id: rwth.php,v 1.3 2003/10/30 13:16:41 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Database for RWTH Aachen";
-$meta_desc="A software keep mensa plans on your Palm.";
+$meta_desc="A software to keep mensa plans on your Palm.";
 $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Mensaplan, RWTH Aachen, RWTH, Aachen";
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
@@ -13,7 +13,8 @@ include("$DOCUMENT_ROOT/software/palm/unimensa/rwth_db_info.inc.php");
 $dbs=array( "RWTH Aachen (generated every friday for next week)" => "UniMensaDB-RWTH.pdb"
            );
 
-$genpdbver="0.1";
+$version="0.3";
+$basename="UniMensa";
 
 box_begin("Uni Mensa Databases", "Last modified ".date ("F d Y H:i:s.", getlastmod()));
 ?>
@@ -31,10 +32,10 @@ box_begin("Uni Mensa Databases", "Last modified ".date ("F d Y H:i:s.", getlastm
 </table>
 
 <div class="maintext">
-<h5>Was ist UniMensa</h5>
+<h5>Was ist UniMensa?</h5>
 UniMensa ist ein Programm um Mensa-Pläne auf einen PalmOS-Handheld zu syncen und mitzunehmen.
 
-<h5>Was gibt's hier</h5>
+<h5>Was gibt's hier?</h5>
 Hier gibt's jede Woche die aktuelle Datenbank. Sie wird stets freitags um 23:00 generiert.
 Die Datenbank wird von der <a href="http://www.studentenwerk-aachen.de" target="_new">Seite des Studentenwerks Aachen</a>
 generiert.
@@ -45,10 +46,15 @@ Das Programm wird offiziell <a href="http://www.studentenwerk-aachen.de/essen/sp
 <li>UniMensa (gibt's <a href="index.php">hier</a>)</li>
 
 <h5>Kurzanleitung</h5>
-Zuerst UniMensa <a href="index.php">hier</a> herunterladen und auf dem PalmOS Handheld installieren. Eine Anleitung
-dazu gibt's auf der UniMensa Seite. Danach einfach wöchentlich die Datenbank auf dem PalmOS installieren. Dazu einfach
-die <a href="UniMensaDB-RWTH.pdb">Palm Datenbank</a> mit dem Palm Desktop, den pilot-tools oder ähnlichem installieren.
+Zuerst UniMensa <a href="<?=$basename?>-<?=$version?>_dist/<?=$basename?>-<?=$version?>-de.prc">hier</a> herunterladen.
+Diese Datei mit der Endung .prc ist das eigentlich Programm für den Palm. Dieses Muss dann auf
+dem Palm Handheld installiert werden (etwa über den Palm Desktop, pilot-tools etc.)
+Eine Anleitung dazu gibt's auf der <a href="index.php">UniMensa Seite</a>.
+Danach einfach wöchentlich die Datenbank auf dem PalmOS installieren. Dazu einfach
+die <a href="UniMensaDB-RWTH.pdb">Palm Datenbank</a> herunterladen und mit
+dem Palm Desktop, den pilot-tools oder ähnlichem installieren.
 Die bestehende Datenbank wird automatisch überschrieben und muss nicht explizit gelöscht werden.
+Nun kann das Programm auf dem Palm Handheld gestartet werden und zeigt den aktuellen Mensaplan an.
 
 <h5>Mailingliste</h5>
 Das <a href="http://www.rz.rwth-aachen.de" target="_new">Rechenzentrum</a> der RWTH Aachen hat freundlicherweise eine
