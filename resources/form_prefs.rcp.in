@@ -1,0 +1,32 @@
+/* $Id: form_prefs.rcp.in,v 1.1 2003/10/08 23:06:15 tim Exp $
+ *
+ * Preferences stuff
+ *
+ * Settings form
+ * Created 2003/10/07
+ */
+
+#include "resources.h"
+
+##TRANSLATION##
+
+string id PREFS_help file "help/prefs.##SHORTLANG##.txt"
+
+form id PREFS_form at (2 64 156 94)
+modal
+helpid PREFS_help
+begin
+  title "prefs_title"
+  
+  label "prefs_last" autoid at (4 18) font 1
+
+  checkbox "prefs_seen" id PREFS_lastseen at (prevleft prevbottom auto auto)
+  checkbox "prefs_default" id PREFS_defmen at (prevleft prevbottom+2 auto auto)
+
+  list "" ID PREFS_menlist AT (prevleft+14 prevbottom 70 auto) visibleitems 5 nonusable
+  popuplist id PREFS_mentrig PREFS_menlist
+  popuptrigger "" id PREFS_mentrig AT (prevleft prevtop auto auto) font 0 usable
+
+  button "" id PREFS_cancel at (120 prevbottom+12 11 11) noframe graphical bitmapid BITMAP_cancel selectedbitmapid BITMAP_cancel_clicked
+  button "" id PREFS_ok at (prevright+3 prevtop 11 11) noframe graphical bitmapid BITMAP_ok selectedbitmapid BITMAP_ok_clicked
+end
