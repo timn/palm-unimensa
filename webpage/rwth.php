@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: rwth.php,v 1.6 2003/11/18 12:35:51 tim Exp $ */
+/* $Id: rwth.php,v 1.7 2004/01/05 23:01:01 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Database for RWTH Aachen";
 $meta_desc="A software to keep mensa plans on your Palm.";
@@ -13,7 +13,7 @@ include("$DOCUMENT_ROOT/software/palm/unimensa/rwth_db_info.inc.php");
 $dbs=array( "RWTH Aachen (generated every friday for next week)" => "UniMensaDB-RWTH.pdb"
            );
 
-$version="0.3";
+$version="0.4";
 $basename="UniMensa";
 
 heading_lastmod();

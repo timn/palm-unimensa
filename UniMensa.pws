@@ -6,16 +6,16 @@ RunInTerminal=true
 ShowLocals=true
 
 [filenumbers]
-0=1
+0=10
 1=21
-2=23
-3=120
-4=54
-5=14
-6=46
-7=15
-8=11
-9=10
+2=60
+3=68
+4=9
+5=1
+6=1
+7=187
+8=15
+9=21
 10=110
 11=4
 12=44
@@ -41,8 +41,16 @@ filter.file.ignore.hidden=0
 filter.dir.ignore.hidden=0
 
 [filelist]
-0=/daten/palm/unimensa/gadget.c
-1=/daten/palm/unimensa/database.h
+0=/daten/palm/unimensa/UniMensa.mk
+1=/daten/palm/unimensa/resources/form_about.rcp.in
+2=/daten/palm/unimensa/resources.h
+3=/daten/palm/unimensa/resources/common.rcp.in
+4=/daten/palm/unimensa/prefs.c
+5=/daten/palm/unimensa/prefs.h
+6=/daten/palm/unimensa/resources/form_main.rcp.in
+7=/daten/palm/unimensa/UniMensa.c
+8=/daten/palm/unimensa/gadget.c
+9=/daten/palm/unimensa/database.h
 
 [Project Tree]
 0=0
