@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: databases.php,v 1.1 2003/02/10 22:45:50 tim Exp $ */
+/* $Id: databases.php,v 1.2 2003/11/14 21:10:59 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Databases";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -8,31 +8,24 @@ $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Me
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
 
-$unis = array("rwth" => "RWTH Aachen (generated every friday for next week)"
+$unis = array("rwth" => "RWTH Aachen (generated every friday for next week)",
+              "unido" => "Universität Dortmund"
               );
 
-$pdbs=array( "rwth" => "UniMensaDB-RWTH.pdb"
+$pdbs=array( "rwth" => "UniMensaDB-RWTH.pdb",
+             "unido" => "http://home.arcor.de/thzide/unimensa/UniMensaDB-UniDo.pdb"
            );
 
-$links=array( "rwth" => "rwth.php"
+$links=array( "rwth" => "rwth.php",
+              "unido" => "http://mensaplan.de.vu/"
              );
 
 $genpdbver="0.1";
 
-box_begin("Uni Mensa Databases", "Last modified ".date ("F d Y H:i:s.", getlastmod()));
+heading_lastmod();
+heading("UniMensa", "Menu Databases for UniMensa",
+        "/software/palm/unimensa/unimensa_big.png", "index.php");
 ?>
-<br/>
-
-<table border="0" cellpadding="4">
- <tr>
-  <td rowspan="2" valign="top"><a href="index.php"><img src="unimensa_big.png" border="0" alt="Uni Mensa"></a></td>
-  <td><h3>Uni Mensa Databases</h3>
- </tr>
- <tr>
-  <td><h4>Databases for UniMensa</h4></td>
- </tr>
-</table>
-
 <div class="maintext">
 <h5>What do you find here</h5>
 Here will be a list of databases available for <a href="index.php">UniMensa</a>. Right that is only the RWTH Aachen but maybe
@@ -75,12 +68,5 @@ Here is the file: <a href="genUMENpdb-<?=$genpdbver?>.tar.gz">genUMENpdb-<?=$gen
 
 </div>
 
-<?php
-box_end();
-
-?>
-
 <? include("$DOCUMENT_ROOT/right.inc.php"); ?>
 <? include("$DOCUMENT_ROOT/footer.inc.php"); ?>
-</body>
-</html>
