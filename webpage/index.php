@@ -1,9 +1,9 @@
 <?php
 
-/* $Id: index.php,v 1.3 2003/10/08 23:31:15 tim Exp $ */
+/* $Id: index.php,v 1.4 2003/10/30 13:19:16 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa";
-$meta_desc="A software keep mensa plans on your Palm.";
+$meta_desc="A software to keep mensa plans on your Palm.";
 $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Mensaplan";
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
