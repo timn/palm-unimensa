@@ -1,4 +1,4 @@
-/* $Id: beam.c,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: beam.c,v 1.2 2003/10/08 23:07:38 tim Exp $
  *
  * Beam related code
  * Basically taken from palmsource.com code recipes
@@ -33,7 +33,7 @@ void BeamDatabase(void) {
     // important to init structure to zeros...
     MemSet(&exgSocket,sizeof(exgSocket),0);
  
-    appInfo = (UMENAppInfoType *)MemLocalIDToLockedPtr(DmGetAppInfoID(DatabaseGetRef()), DATABASE_CARD);
+    appInfo = (UMENAppInfoType *)MemLocalIDToLockedPtr(DmGetAppInfoID(DatabaseGetRef()), DatabaseGetCardNo());
 
     MemSet(label, 2*dateStringLength+4, 0);
     str = label;
