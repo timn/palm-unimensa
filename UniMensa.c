@@ -1,4 +1,4 @@
-/* $Id: UniMensa.c,v 1.2 2003/10/08 23:04:54 tim Exp $
+/* $Id: UniMensa.c,v 1.3 2004/01/05 21:15:10 tim Exp $
  *
  * UniMensa main and event handling
  */
@@ -129,6 +129,7 @@ static void MainFormInit (FormPtr frm){
 
     // Assign the string to the label and position
     CtlSetLabel(GetObjectPtr(LABEL_head), gHeadLabel);
+    FrmShowObject(frm, FrmGetObjectIndex(frm, LABEL_head));
     FrmSetObjectPosition(frm, FrmGetObjectIndex(frm, LABEL_head), (160-lineWidth)/2, DATE_TOP_Y);
 
     MemPtrUnlock(appInfo);
@@ -141,6 +142,7 @@ static void MainFormInit (FormPtr frm){
 
     FrmHideObject(frm, FrmGetObjectIndex(frm, GADGET_text));
     FrmHideObject(frm, FrmGetObjectIndex(frm, LIST_cat_trigger));
+    FrmHideObject(frm, FrmGetObjectIndex(frm, LABEL_head));
 
     FrmShowObject(frm, FrmGetObjectIndex(frm, LABEL_nodb));
     
@@ -164,7 +166,11 @@ Boolean HandleMenuEvent (UInt16 command){
       break;
 
     case MENUITEM_beam:
-      BeamDatabase();
+      if (DatabaseGetRef() == NULL) {
+        FrmAlert(ALERT_nodb);
+      } else {
+        BeamDatabase();
+      }
       handled=true;
       break;
 
@@ -179,12 +185,20 @@ Boolean HandleMenuEvent (UInt16 command){
       break;
 
     case MENUITEM_prefs:
-      FrmPopupForm(PREFS_form);
+      if (DatabaseGetRef() == NULL) {
+        FrmAlert(ALERT_nodb);
+      } else {
+        FrmPopupForm(PREFS_form);
+      }
       handled=true;
       break;
 
     case MENUITEM_dbinfo:
-      FrmPopupForm(DBINFO_form);
+      if (DatabaseGetRef() == NULL) {
+        FrmAlert(ALERT_nodb);
+      } else {
+        FrmPopupForm(DBINFO_form);
+      }
       handled=true;
       break;
 

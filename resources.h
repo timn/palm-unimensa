@@ -1,4 +1,4 @@
-/* $Id: resources.h,v 1.2 2003/10/08 23:09:25 tim Exp $
+/* $Id: resources.h,v 1.3 2004/01/05 21:15:10 tim Exp $
  *
  * ID's for use in ressource definitions
  *
@@ -63,6 +63,7 @@
 #define ALERT_ROMIncompatible 4001
 #define ALERT_debug 4002
 #define ALERT_nomem 4004
+#define ALERT_nodb 4005
 
 #define BITMAP_ok 5000
 #define BITMAP_ok_clicked 5001
