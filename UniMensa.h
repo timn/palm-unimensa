@@ -1,4 +1,4 @@
-/* $Id: UniMensa.h,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: UniMensa.h,v 1.2 2003/10/08 23:05:22 tim Exp $
  *
  * Basic defines and "Global" function prototypes for menu handling and
  * pointer retrieval
@@ -13,8 +13,6 @@
 
 #define APP_CREATOR 'UMEN'
 #define MINVERSION		0x03500000
-
-#define DATE_TOP_Y 18
 
 #define UNICHAT_APP_CREATOR 'UCHT'
 #define UNIMATRIX_APP_CREATOR 'UMTX'
