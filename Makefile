@@ -13,6 +13,8 @@ include *.mk
 
 CC = m68k-palmos-gcc
 CFLAGS = -O2 -Wall
+#CFLAGS = -g
+#LDFLAGS = -g
 
 LANGUAGE ?= german
 SHORTLANGUAGE := $(shell grep "$(LANGUAGE)" languages | awk -F : '{ print $$1 }')
@@ -59,6 +61,7 @@ $(PROGNAME): $(OBJECTS)
 	-e 'r resources/translation.$(SHORTLANGUAGE)' -e 's/##TRANSLATION##//' \
 	-e '}' \
         -e 's/##APPID##/$(APPID)/g' -e 's/##APPNAME##/$(PROGDESC)/g' \
+        -e 's/##SHORTLANG##/$(SHORTLANGUAGE)/g' \
         < $< > $@
 
 install: clean all
@@ -89,4 +92,7 @@ package: clean all
 upload: dist
 	scp -r $(PROGNAME)-$(VERSION)_dist $(SSH_USER)@$(SSH_HOST):$(SSH_PATH)
 	scp -r webpage/* $(SSH_USER)@$(SSH_HOST):$(SSH_PATH)
+
+status:
+	cvs status | grep File | grep -v Up-to-date
 
