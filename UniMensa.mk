@@ -1,4 +1,4 @@
-VERSION=0.2
+VERSION=0.3
 PROGNAME=UniMensa
 PROGDESC=Uni Mensa
 APPID=UMEN
@@ -7,4 +7,3 @@ APPID=UMEN
 SSH_USER=tim
 SSH_HOST=www.niemueller.de
 SSH_PATH=~/niemueller.de/htdocs/software/palm/unimensa/
-
