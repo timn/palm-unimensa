@@ -1,4 +1,4 @@
-/* $Id: UniMensa.c,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: UniMensa.c,v 1.2 2003/10/08 23:04:54 tim Exp $
  *
  * UniMensa main and event handling
  */
@@ -8,9 +8,12 @@
 #include "tnglue.h"
 #include "gadget.h"
 #include "beam.h"
+#include "prefs.h"
+#include "dbinfo.h"
 
 Char gCategoryName[dmCategoryLength];
 Char gHeadLabel[2*longDateStrLength+4], *str;
+UniMensaPrefs gPrefs;
 
 /***********************************************************************
  * function is called at program start
@@ -29,7 +32,20 @@ static UInt16 StartApplication (void) {
   // Open Database
   err = OpenDatabase();
 
-  DatabaseSetCat(0);
+  // Load Preferences
+  PrefLoadPrefs(&gPrefs);
+
+  if (gPrefs.lastDB == DatabaseGetType()) {
+    if (gPrefs.lastSeen) {
+      DatabaseSetCat(gPrefs.curMensa);
+    } else if (gPrefs.remMensa) {
+      DatabaseSetCat(gPrefs.defMensa);
+    } else {
+      DatabaseSetCat(0);
+    }
+  } else {
+    DatabaseSetCat(0);
+  }
 
   return (err);
 }
@@ -95,7 +111,7 @@ static void MainFormInit (FormPtr frm){
     GadgetSetWeekday(dow-1);
 
     // Get AppInfo block for the dates
-    appInfo = (UMENAppInfoType *)MemLocalIDToLockedPtr(DmGetAppInfoID(DatabaseGetRef()), DATABASE_CARD);
+    appInfo = (UMENAppInfoType *)MemLocalIDToLockedPtr(DmGetAppInfoID(DatabaseGetRef()), DatabaseGetCardNo());
 
     // Set the header string
     MemSet(gHeadLabel, 2*dateStringLength+4, 0);
@@ -162,6 +178,15 @@ Boolean HandleMenuEvent (UInt16 command){
       handled=true;
       break;
 
+    case MENUITEM_prefs:
+      FrmPopupForm(PREFS_form);
+      handled=true;
+      break;
+
+    case MENUITEM_dbinfo:
+      FrmPopupForm(DBINFO_form);
+      handled=true;
+      break;
 
     default:
       break;
@@ -329,10 +354,11 @@ static Boolean AppHandleEvent( EventPtr eventP) {
       // active form is called by FrmHandleEvent each time is receives an
       // event.
 		  switch (formId) {
-			  case FORM_main:
-				  FrmSetEventHandler(frmP, MainFormHandleEvent);
-				  break;
+			  case FORM_main: FrmSetEventHandler(frmP, MainFormHandleEvent); break;
+			  case PREFS_form: FrmSetEventHandler(frmP, PrefsFormHandleEvent); break;
+			  case DBINFO_form: FrmSetEventHandler(frmP, DBinfoFormHandleEvent); break;
 
+        default:
   				ErrNonFatalDisplay("Invalid Form Load Event");
 		  		break;
 			}
@@ -379,6 +405,12 @@ static void StopApplication (void){
   // UInt16 cat=DatabaseGetCat();
 
 	FrmCloseAllForms ();
+
+  // Save Preferences
+  gPrefs.curMensa = DatabaseGetCat();
+  gPrefs.lastDB = DatabaseGetType();
+  PrefSavePrefs(&gPrefs);
+
 	CloseDatabase();
   // PrefSetAppPreferences(APP_CREATOR, PREFS_CURCAT, PREFS_VERSION, &cat, sizeof(cat), false);
 }
