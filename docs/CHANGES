@@ -3,6 +3,16 @@
 ==============================================================================
 
 === v0.3
+* Wed Oct 08 2003 Tim Niemueller <tim@niemueller.de>
+- Added preferences stuff
+- UniMensa can now start with the last opened mensa or with a default mensa
+- First code to support multiple databases. Type field of database is now the
+  university code. Right now if multiple databases are installed the first one
+  found is opened.
+- Help files for preferences
+- Database info form
+
+* Mon Feb 10 2003 Tim Niemueller <tim@niemueller.de>
 - re-organized parts of the source code. Added resources.h to keep all
   resource IDs
 - Made source CVS-ready
@@ -22,4 +32,4 @@
 
 
 
-$Id: CHANGES,v 1.1 2003/02/10 22:45:50 tim Exp $
+$Id: CHANGES,v 1.2 2003/10/08 23:11:13 tim Exp $

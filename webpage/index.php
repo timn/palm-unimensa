@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: index.php,v 1.1 2003/02/10 22:45:50 tim Exp $ */
+/* $Id: index.php,v 1.2 2003/10/08 23:11:13 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -8,7 +8,7 @@ $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Me
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
 
-$version="0.2";
+$version="0.3";
 $basename="UniMensa";
 $languages=array( "de" => "German/Deutsch",
                   "en" => "English"
@@ -66,14 +66,19 @@ send you the language file.
 <h5>Databases</h5>
 My databases and later also databases created for other universities may be found <a href="databases.php">here</a>.
 
+<?include("$DOCUMENT_ROOT/software/palm/sponsoring.inc.php");?>                                                                                
+
 <h5>News</h5>
 <b>2002/11/28</b><br/>
 First public release.
 If you find any bugs please send me a <a href="mailto:unimensa-bug@niemueller.de">mail</a> describing the
 problem (please note OS and hardware you use).
-<b>2003/01/30</b><br/>
+<br/><b>2003/01/30</b><br/>
 Fixed simple but annoying bug. It showed the wrong menu on startup when not monday.
-
+<br/><b>2003/10/08</b><br/>
+Several small improvements. Preferences for startup behavior (show last seen mensa,
+set a default or show database default) and database info that shows for which
+university the database belongs to.
 
 <h5>Thanks</h5>
 A special thanks to my friends Tobias "The Bugfinder" Weyand and Sumedha Ananda Markus Widyadharma (just had to write

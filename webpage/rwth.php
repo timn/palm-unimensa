@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: rwth.php,v 1.1 2003/02/10 22:45:50 tim Exp $ */
+/* $Id: rwth.php,v 1.2 2003/10/08 23:11:13 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Database for RWTH Aachen";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -26,7 +26,7 @@ box_begin("Uni Mensa Databases", "Last modified ".date ("F d Y H:i:s.", getlastm
   <td><h3>Uni Mensa Datenbank f&uuml;r die RWTH Aachen</h3>
  </tr>
  <tr>
-  <td><h4>W&ouml;chentliche Datenbank</h4></td>
+  <td><h4>W&ouml;chentliche Datenbank (Mensaplan)</h4></td>
  </tr>
 </table>
 

@@ -6,15 +6,15 @@ RunInTerminal=true
 ShowLocals=true
 
 [filenumbers]
-0=44
-1=8
-2=62
-3=40
-4=1
-5=107
-6=97
-7=54
-8=9
+0=228
+1=24
+2=23
+3=120
+4=54
+5=14
+6=46
+7=15
+8=11
 9=10
 10=110
 11=4
@@ -35,20 +35,41 @@ ShowLocals=true
 11=
 12=
 
+[File View]
+filter.file.unmatch=*.so *.o *.a *.la
+filter.file.ignore.hidden=0
+filter.dir.ignore.hidden=0
+
+[filelist]
+0=/home/palm/unimensa/UniMensa.c
+1=/home/palm/unimensa/resources/translation.de
+2=/home/palm/unimensa/resources/form_prefs.rcp.in
+3=/home/palm/unimensa/prefs.c
+4=/home/palm/unimensa/resources.h
+
+[Project Tree]
+0=0
+1=0:0
+2=0:1
+3=0:3
+
+[File Tree]
+0=0
+
 [replace_text]
 0=BUFFER_MAXLEN-1
 1=TNDrawCharsToFitWidth
 2=cats
 
 [find_text]
-0=UniMatrix
-1=Input
-2=menu_start
-3=strlen
-4=Label
-5=und Klö
-6=und Klä
-7=511
+0=gPrefs
+1=UniMatrix
+2=Input
+3=menu_start
+4=strlen
+5=Label
+6=und Klö
+7=und Klä
 
 [find_in_files]
 0=DrawCharsToFitWidth
