@@ -1,4 +1,4 @@
-/* $Id: resources.h,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: resources.h,v 1.2 2003/10/08 23:09:25 tim Exp $
  *
  * ID's for use in ressource definitions
  *
@@ -14,6 +14,8 @@
 #define APP_ID 100
 #define APP_NAMEID 101
 #define APP_CATEGORIES 102
+
+#define DATE_TOP_Y 18
 
 #define FORM_main 1001
 #define GADGET_text 1010
@@ -35,12 +37,28 @@
 #define BITMAP_logo 1061
 #define BUTTON_about_ok 1062
 
+#define PREFS_form 1070
+#define PREFS_lastseen 1071
+#define PREFS_defmen 1072
+#define PREFS_menlist 1073
+#define PREFS_mentrig 1074
+#define PREFS_ok 1075
+#define PREFS_cancel 1076
+#define PREFS_help 1077
+
+#define DBINFO_form 1080
+#define DBINFO_uni 1081
+#define DBINFO_valid 1082
+#define DBINFO_ok 1083
+
 #define MENU_main 2001
 #define MENUITEM_about 2002
 #define MENUITEM_beam 2003
 #define MENUITEM_matrix 2004
 #define MENUITEM_chat 2005
 #define MENUITEM_addsep 2006
+#define MENUITEM_prefs 2007
+#define MENUITEM_dbinfo 2008
 
 #define ALERT_ROMIncompatible 4001
 #define ALERT_debug 4002
@@ -48,6 +66,7 @@
 
 #define BITMAP_ok 5000
 #define BITMAP_ok_clicked 5001
-
+#define BITMAP_cancel 5002
+#define BITMAP_cancel_clicked 5003
 
 #define HelpROMIncompatible 1005
