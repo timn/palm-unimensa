@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: databases.php,v 1.4 2003/11/14 22:10:10 tim Exp $ */
+/* $Id: databases.php,v 1.5 2004/01/18 21:06:58 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Databases";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -8,19 +8,22 @@ $meta_keyw="Palm, PalmOS, university, planer, mensa, beaming, semester, food, Me
 include("$DOCUMENT_ROOT/header.inc.php");
 include("$DOCUMENT_ROOT/left.inc.php");
 
-$unis = array("rwth" => "RWTH Aachen (generated every friday for next week)",
-              "unido" => "Universit&auml;t Dortmund"
+$unis = array("rwth"   => "RWTH Aachen (generated every friday for next week)",
+              "unido"  => "Universit&auml;t Dortmund",
+              "tuda"   => "TU Darmstadt",
               );
 
-$pdbs=array( "rwth" => "UniMensaDB-RWTH.pdb",
-             "unido" => "http://home.arcor.de/thzide/unimensa/UniMensaDB-UniDo.pdb"
+$pdbs=array( "rwth"    => "UniMensaDB-RWTH.pdb",
+             "unido"   => "http://home.arcor.de/thzide/unimensa/UniMensaDB-UniDo.pdb",
+             "tuda"    => "http://www.jakewalk.de/unimensa/UniMensaDB-TUD.pdb",
            );
 
-$links=array( "rwth" => "rwth.php",
-              "unido" => "http://mensaplan.de.vu/"
+$links=array( "rwth"   => "rwth.php",
+              "unido"  => "http://mensaplan.de.vu/",
+              "tuda"   => "http://www.jakewalk.de/unimensa.html",
              );
 
-$genpdbver="0.1";
+$genpdbver="0.3";
 
 heading_lastmod();
 heading("UniMensa", "Menu Databases for UniMensa",
