@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: index.php,v 1.2 2003/10/08 23:11:13 tim Exp $ */
+/* $Id: index.php,v 1.3 2003/10/08 23:31:15 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa";
 $meta_desc="A software keep mensa plans on your Palm.";
@@ -141,7 +141,7 @@ You may download the Palm install file provided as a .zip and as a .tar.gz file.
   <td>&nbsp; &nbsp;</td>
   <td></td>
   <td>&nbsp;</td>
-  <td><a href="http://www.palmgear.com/software/redirector.cfm/UniMensa0.1en.zip?prodID=45714&type=zip">.zip</a> (<?=filesize("{$basename}-{$version}_dist/{$basename}-{$version}-en.zip")?> Bytes)</td>
+  <td><a href="http://www.palmgear.com/software/redirector.cfm/UniMensa<?=$version?>en.zip?prodID=45714&type=zip">.zip</a> (<?=filesize("{$basename}-{$version}_dist/{$basename}-{$version}-en.zip")?> Bytes)</td>
  </tr>
 </table>
 <br/>
