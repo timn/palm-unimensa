@@ -8,8 +8,6 @@
 
 include ../UniMensa.mk
 
-GENPDBVERSION=0.3
-
 CC=gcc
 CFLAGS=-static
 LDFLAGS=-static
