@@ -1,0 +1,25 @@
+/* $Id: form_main.rcp.in,v 1.1 2003/02/10 22:45:50 tim Exp $
+ *
+ * ressource file for main form
+ */
+
+#include "resources.h"
+
+form id FORM_main at (0 0 160 160)
+menuid MENU_main
+begin
+  title "Uni Mensa"
+  list "" ID LIST_cat AT (90 2 70 auto) visibleitems 5 nonusable
+  popuplist id LIST_cat_trigger LIST_cat
+  popuptrigger "" id LIST_cat_trigger AT (140 0 auto auto) font 0 usable rightanchor
+  label "01. Jan 2000 - 01. Jan 2000" id LABEL_head at (center DATE_TOP_Y) fontid 1
+  pushbutton "Mon" id BUTTON_mon at (2 34 26 auto) group GROUP_day
+  pushbutton "Die" id BUTTON_tue at (prevright prevtop 26 auto) group GROUP_day
+  pushbutton "Mit" id BUTTON_wed at (prevright prevtop 26 auto) group GROUP_day
+  pushbutton "Don" id BUTTON_thu at (prevright prevtop 26 auto) group GROUP_day
+  pushbutton "Fre" id BUTTON_fri at (prevright prevtop 26 auto) group GROUP_day
+  pushbutton "Sam" id BUTTON_sat at (prevright prevtop 26 auto) group GROUP_day
+  gadget GADGET_text at (0 prevbottom+4 153 110)
+  scrollbar id SCROLL_text at (prevright prevtop 7 prevheight)
+  label "Keine Datenbank gefunden" id LABEL_nodb at (center 60) nonusable
+end

@@ -1,0 +1,25 @@
+
+ [Uni Mensa] CHANGES
+==============================================================================
+
+=== v0.3
+- re-organized parts of the source code. Added resources.h to keep all
+  resource IDs
+- Made source CVS-ready
+
+=== v0.2
+
+* Thu Jan 30 2003 Tim Niemueller <tim@niemueller.de>
+- Fixed bug that the startup weekday was not drawn correctly, forgot a simple
+  GadgetSetWeekday
+
+* Thu Nov 27 2002 Tim Niemueller <tim@niemueller.de>
+- Interface done. Ready for release.
+- care about up and down hard buttons
+
+* Thu Nov 27 2002 Tim Niemueller <tim@niemueller.de>
+- genUMENpdb is now finally done. Decided to start with 0.2 version
+
+
+
+$Id: CHANGES,v 1.1 2003/02/10 22:45:50 tim Exp $

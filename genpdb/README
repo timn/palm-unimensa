@@ -1,0 +1,66 @@
+
+Uni Mensa - Database Generator genUMENpdb
+==============================================================================
+
+** Introduction
+*
+This files are example code on how to create databases for UniMensa.
+
+** Prerequisits
+*
+It depends on how much code you can reuse from what I wrote for your
+university.
+If you use most of the code you will need the following Perl modules:
+HTML::TreeBuilder (which needs HTML::Parser)
+Date::Calc
+HTTP::Lite
+
+If you want to use senddb.pl to send the database to an email address
+(of an mailinglist for example) then you will also need the following
+modules:
+MIME::Lite
+Net::SMTP
+And an SMTP server that you can send through
+
+** The generated files - or: How to generate own DBs
+*
+If you use my scripts then getmensa.pl will get the webpage with a POST HTTP
+request. It will write it to mensa.raw.
+parsemensa.pl will then open this file and extract the needed information.
+It will generate an easy to parse file called mensa.pre. See the comment at
+the top of parsemensa.pl about the format of this file.
+Of course you can do this in one script but I wanted to keep scripts clean
+and easy so I split them up.
+genUMENpdb then finally creates the database. I do not (yet) publish the
+source code since it looks pretty bad and I want to get that distance.
+genUMENpdb is in many ways pretty bad coded. It needs to read from
+mensa.pre, the file MUST be named that way and it MUST be in the cwd.
+It will create a file called unimensa.pdb if mensa.pre had correct syntax.
+Make sure that you have at most 16 mensas. Each mensa MUST have 6 lines
+of entries. Each one representing one day. They may be no longer than
+2047 chars. If you put :: somewhere into the string it is replaced by the
+generator with \n\n (two linefeeds). This can be used to represent
+the <br> in HTML output.
+
+Note: maybe you have direct access for example to the database that the plans
+are stored in. Than you do not need all that parsing stuff but you can create
+mensa.pre directly from that data! It is just the way I need it.
+
+If you have problems try the --debug flag for genUMENpdb, it generates some
+output that may be helpful.
+
+
+** End
+*
+Hope someone will find that useful and create own PDBs. Please drop me a not
+and I will put the download URL of your database to my page.
+I plan to make the generation more comfortable by adding more flags
+and opening the code. A on-thy-fly generator on the webpage or via SOAP
+would also be an idea...
+But first I need some users. If you are a user and if you _can code_ and want
+to generate databases for your university then contact if you have problems.
+Please no newbie questions. If you cannot code learn it and ask afterwards.
+
+Tim Niemueller <tim@niemueller.de>
+Aachen, November 29th 2002
+

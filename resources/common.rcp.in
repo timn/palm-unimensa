@@ -1,0 +1,52 @@
+/* $Id: common.rcp.in,v 1.1 2003/02/10 22:45:50 tim Exp $
+ *
+ * Common resources like bitmaps, menus, alerts
+ * Created: 2002-08-13
+ */
+
+#include "resources.h"
+
+bitmapfamily id BITMAP_logo "images/icon_sw.bmp" "" "" "images/icon_256c.bmp" compress
+
+bitmapcolor id BITMAP_ok "images/ok.bmp" compress
+bitmapcolor id BITMAP_ok_clicked "images/ok_clicked.bmp" compress
+
+
+##TRANSLATION##
+
+
+menu id MENU_main
+begin
+  pulldown "Uni Mensa"
+  begin
+    menuitem "men_beam" id MENUITEM_beam "B"
+    menuitem separator
+    menuitem "men_ab" id MENUITEM_about "A"
+  end
+end
+
+
+alert id ALERT_ROMIncompatible
+error
+begin
+  title "al_rominc1"
+  message "al_rominc2"
+  buttons "al_ok"
+end
+
+alert id ALERT_debug
+information
+begin
+  title "Guru Meditation"
+  message "^1^2^3"
+  buttons "OK"
+end
+
+
+alert id ALERT_nomem
+warning
+begin
+  title "al_nomem1"
+  message "al_nomem2"
+  buttons "al_ok"
+end

@@ -1,0 +1,20 @@
+
+Uni Mensa
+==============================================================================
+
+** Introduction
+This PalmOS software keeps the current plan for the food in your universities
+mensas (if you write a datastructure somehow).
+
+
+** Installation
+Please read the file INSTALL if you want to install Uni Mensa on your
+PalmOS handheld device.
+
+
+Tim Niemueller <tim@niemueller.de>
+Aachen, August 1st 2002
+
+
+
+$Id: README,v 1.1 2003/02/10 22:45:50 tim Exp $
