@@ -1,4 +1,4 @@
-/* $Id: translation.en,v 1.1 2003/02/10 22:45:50 tim Exp $ */
+/* $Id: translation.en,v 1.2 2003/10/08 23:08:04 tim Exp $ */
 
 translation "english"
 begin
@@ -14,6 +14,22 @@ begin
 /* menu */
   "men_ab" = "About"
   "men_beam" = "Beam"
+  "men_opt" = "Options"
+  "men_prefs" = "Settings..."
+  "men_dbinfo" = "Database Info"
+
+
+/* Preferences */
+  "prefs_title" = "Settings"
+  "prefs_last" = "Behavior on Startup"
+  "prefs_seen" = "Save last mensa"
+  "prefs_default" = "Always default mensa"
+
+
+/* Database Info */
+  "dbinfo_title" = "Database Info"
+  "dbinfo_uni" = "University"
+  "dbinfo_valid" = "Valid during"
 
 
 /* alerts */
