@@ -1,4 +1,4 @@
-/* $Id: getUMENpdbUniDate.c,v 1.1 2003/02/10 22:45:50 tim Exp $
+/* $Id: getUMENpdbUniDate.c,v 1.1.1.1 2003/02/10 22:45:50 tim Exp $
  *
  * Extract university and date from a UniMensa PDB
  */

@@ -1,4 +1,4 @@
-/* $Id: beam.c,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: beam.c,v 1.1.1.1 2003/02/10 22:45:49 tim Exp $
  *
  * Beam related code
  * Basically taken from palmsource.com code recipes

@@ -1,4 +1,4 @@
-/* $Id: database.c,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: database.c,v 1.1.1.1 2003/02/10 22:45:49 tim Exp $
  *
  * Database related functions
  */

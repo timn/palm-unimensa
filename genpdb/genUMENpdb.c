@@ -6,7 +6,7 @@
  * PURPOSE:      Create
  * DESCRIPTION:  Creates a PDB file with Mensa plan
  *
- * $Id: genUMENpdb.c,v 1.1 2003/02/10 22:45:50 tim Exp $
+ * $Id: genUMENpdb.c,v 1.1.1.1 2003/02/10 22:45:50 tim Exp $
  *
  ****************************************************************************/
 

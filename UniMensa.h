@@ -1,4 +1,4 @@
-/* $Id: UniMensa.h,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: UniMensa.h,v 1.1.1.1 2003/02/10 22:45:49 tim Exp $
  *
  * Basic defines and "Global" function prototypes for menu handling and
  * pointer retrieval

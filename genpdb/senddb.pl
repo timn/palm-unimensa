@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# $Id: senddb.pl,v 1.1 2003/02/10 22:45:50 tim Exp $
+# $Id: senddb.pl,v 1.1.1.1 2003/02/10 22:45:50 tim Exp $
 #
 # Send current database to mailinglist
 

@@ -1,6 +1,6 @@
 <?php
 
-/* $Id: rwth.php,v 1.1 2003/02/10 22:45:50 tim Exp $ */
+/* $Id: rwth.php,v 1.1.1.1 2003/02/10 22:45:50 tim Exp $ */
 
 $title="niemueller.de - palm software - UniMensa Database for RWTH Aachen";
 $meta_desc="A software keep mensa plans on your Palm.";

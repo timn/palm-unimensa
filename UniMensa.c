@@ -1,4 +1,4 @@
-/* $Id: UniMensa.c,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: UniMensa.c,v 1.1.1.1 2003/02/10 22:45:49 tim Exp $
  *
  * UniMensa main and event handling
  */

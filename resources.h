@@ -1,4 +1,4 @@
-/* $Id: resources.h,v 1.1 2003/02/10 22:45:49 tim Exp $
+/* $Id: resources.h,v 1.1.1.1 2003/02/10 22:45:49 tim Exp $
  *
  * ID's for use in ressource definitions
  *
