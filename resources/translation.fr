@@ -1,0 +1,52 @@
+/* $Id: translation.fr,v 1.1 2005/07/24 16:28:17 tim Exp $ */
+
+translation "french"
+begin
+
+/* about translation */
+  "translator" = "Nicolas Derive"
+  "trans_mail" = "loup_74@hotmail.com"
+  "trans_hdev" = "Palm m515"
+  "trans_palm" = "4.1"
+  "trans_trby" = "Traduction française par :"
+
+
+/* menu */
+  "men_ab" = "A propos de..."
+  "men_beam" = "Transmettre"
+  "men_opt" = "Options"
+  "men_prefs" = "Préférences..."
+  "men_dbinfo" = "Infos sur la base de données"
+
+
+/* Preferences */
+  "prefs_title" = "Réglages"
+  "prefs_last" = "S'afficher au démarrage"
+  "prefs_seen" = "Sauvegarder le dernier resto U"
+  "prefs_default" = "Toujours afficher le resto U par défaut"
+
+
+/* Database Info */
+  "dbinfo_title" = "Infos sur la base de données"
+  "dbinfo_uni" = "Université"
+  "dbinfo_valid" = "Durée de validité"
+
+
+/* alerts */
+  "al_ok" = "OK"
+  "al_rominc1" = "Système incompatible"
+  "al_rominc2" = "La Version 3.5 ou supérieure du système est requise pour démarrer cette application."
+  "al_nomem1" = "Mémoire insuffisante"
+  "al_nomem2" = "Ne peut pas attribuer la mémoire."
+  "al_nodb1" = "Il n'y a aucune base de données disponible"
+  "al_nodb2" = "Une base de données est nécessaire pour réaliser cette opération."
+
+
+/* about */
+  "ab_title" = "A propos de UniMensa"
+  "ab_d1" = "Les menus de vos restos U sur votre"
+  "ab_d2" = "ordinateur de poche PalmOS"
+  "ab_get" = "Téléchargez les mises à jour sur :"
+
+
+end
